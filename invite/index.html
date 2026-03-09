@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You've been invited to Brainy</title>
+  <meta name="description" content="Your friend invited you to Brainy — the micro-learning app for personal growth." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, #6C63FF 0%, #8B85FF 100%);
+      padding: 24px;
+    }
+    .card {
+      background: #fff; border-radius: 28px;
+      padding: 48px 40px; max-width: 440px; width: 100%;
+      text-align: center;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.2);
+    }
+    .icon { font-size: 56px; margin-bottom: 20px; }
+    h1 { font-size: 26px; font-weight: 800; color: #0F0F1A; margin-bottom: 12px; letter-spacing: -0.5px; }
+    p { color: #6B7280; font-size: 16px; line-height: 1.6; margin-bottom: 28px; }
+    .code-box {
+      background: #EEF0FF; border-radius: 14px; padding: 20px;
+      margin-bottom: 32px;
+    }
+    .code-label { font-size: 12px; font-weight: 600; letter-spacing: 1px; color: #6C63FF; text-transform: uppercase; margin-bottom: 8px; }
+    .code { font-size: 32px; font-weight: 900; letter-spacing: 6px; color: #0F0F1A; }
+    .download-btn {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      background: #0F0F1A; color: #fff;
+      padding: 16px; border-radius: 14px; text-decoration: none;
+      font-size: 15px; font-weight: 700;
+      transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+    .download-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.2); }
+    .download-btn svg { flex-shrink: 0; }
+    .download-sub { font-size: 12px; opacity: 0.7; }
+    .skip { display: block; margin-top: 20px; color: #9CA3AF; font-size: 14px; text-decoration: none; }
+    .skip:hover { color: #6C63FF; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon">🧠</div>
+    <h1>You've been invited!</h1>
+    <p>A friend shared Brainy with you. Download the app, sign up, and enter the code below to both earn bonus XP.</p>
+
+    <div class="code-box" id="codeBox" style="display:none;">
+      <div class="code-label">Your referral code</div>
+      <div class="code" id="referralCode"></div>
+    </div>
+
+    <a href="https://apps.apple.com/app/id000000000" class="download-btn" id="appStoreLink">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
+        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+      </svg>
+      <div>
+        <div class="download-sub">Download on the</div>
+        App Store
+      </div>
+    </a>
+    <a href="/" class="skip">Learn more about Brainy →</a>
+  </div>
+
+  <script>
+    // Extract referral code from query string
+    const params = new URLSearchParams(window.location.search);
+    const ref = params.get('ref');
+    if (ref) {
+      document.getElementById('referralCode').textContent = ref.toUpperCase();
+      document.getElementById('codeBox').style.display = 'block';
+      // Append code to App Store link so it can be read on first open
+      const link = document.getElementById('appStoreLink');
+      link.href = link.href + '?ref=' + encodeURIComponent(ref);
+    }
+  </script>
+</body>
+</html>
