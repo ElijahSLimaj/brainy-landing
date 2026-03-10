@@ -32,7 +32,7 @@ export default function WhyText() {
               We made a deliberate<br />choice. No videos.
             </h2>
             <p className="text-t2 text-[16px] leading-[1.85] mb-5">
-              Not because it was cheaper or easier. Because we genuinely believe that reading is the deepest, most powerful way to learn something, and that most apps have forgotten that.
+              We built Brainy around reading because we believe it is the deepest, most powerful way to learn something. Most apps have forgotten that.
             </p>
             <p className="text-t2 text-[16px] leading-[1.85]">
               Decades of cognitive science back us up. Here is what the research actually says.

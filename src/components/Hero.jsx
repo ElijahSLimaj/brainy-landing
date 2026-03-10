@@ -1,9 +1,8 @@
-function Phone({ src, alt, center }) {
+function Phone({ src, alt, center, className = '' }) {
   return (
     <div
-      className={`relative rounded-[2.2rem] overflow-hidden bg-surface-2 ${center ? 'z-10' : 'opacity-75'}`}
+      className={`relative rounded-[2.2rem] overflow-hidden bg-surface-2 ${center ? 'z-10' : 'opacity-75'} ${className}`}
       style={{
-        width: center ? 256 : 210,
         border: '1.5px solid #3D3D5C',
         boxShadow: center
           ? '0 60px 100px rgba(0,0,0,0.8), 0 0 60px rgba(124,58,237,0.25)'
@@ -62,9 +61,9 @@ export default function Hero() {
         </div>
 
         <div className="relative flex items-end justify-center gap-5 mt-20">
-          <Phone src="/images/courses.png" alt="Courses" />
-          <Phone src="/images/homepage.png" alt="Home" center />
-          <Phone src="/images/reviewcoursepage.png" alt="Review" />
+          <Phone src="/images/courses.png" alt="Courses" className="hidden md:block w-[210px]" />
+          <Phone src="/images/homepage.png" alt="Home" center className="w-[75vw] max-w-[256px] md:w-[256px]" />
+          <Phone src="/images/reviewcoursepage.png" alt="Review" className="hidden md:block w-[210px]" />
           <div
             className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-80 h-24 pointer-events-none"
             style={{ background: 'radial-gradient(ellipse, rgba(124,58,237,0.2) 0%, transparent 70%)' }}
