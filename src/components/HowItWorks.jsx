@@ -1,8 +1,8 @@
 const steps = [
-  { n: 1, title: 'Pick a course', desc: 'Browse 100+ courses on productivity, communication, finance, mindset, and more.' },
-  { n: 2, title: 'Complete a lesson in 5 minutes', desc: 'Read the material, take a quick quiz. No videos, no filler, just the core idea.' },
+  { n: 1, title: 'Pick a course', desc: 'Browse courses on productivity, communication, finance, mindset, leadership, and more.' },
+  { n: 2, title: 'Read a lesson in 10–15 minutes', desc: 'Text-based, tightly written, no padding. Then test yourself with a short quiz.' },
   { n: 3, title: 'Practice with AI role play', desc: 'Apply what you learned in a realistic scenario before the next lesson unlocks.' },
-  { n: 4, title: 'Watch your skills compound', desc: 'Small daily lessons add up fast. Track XP, streaks, and completions over time.' },
+  { n: 4, title: 'Watch your skills compound', desc: 'Lessons add up. Track XP, streaks, and completions as your knowledge grows.' },
 ]
 
 const mockLessons = [
@@ -16,24 +16,26 @@ export default function HowItWorks() {
     <section id="how" className="border-t-subtle">
       <div className="max-w-5xl mx-auto px-8 py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          {/* left */}
           <div>
-            <p className="text-purple text-xs font-bold tracking-[1.5px] uppercase mb-4">How it works</p>
-            <h2 className="text-[clamp(28px,4vw,44px)] font-black tracking-tight leading-tight mb-3">
-              From zero to expert,<br />one day at a time
+            <p className="text-purple-light text-xs font-bold tracking-[1.5px] uppercase mb-4">How it works</p>
+            <h2 className="text-[clamp(28px,4vw,44px)] font-black tracking-tight leading-tight mb-4">
+              From zero to fluent,<br />one lesson at a time
             </h2>
-            <p className="text-t2 text-[16px] leading-relaxed mt-4 mb-10">
+            <p className="text-t2 text-[16px] leading-relaxed mt-2 mb-10">
               A structured path that builds real knowledge without the overwhelm.
             </p>
 
             <div className="flex flex-col">
               {steps.map((s, i) => (
-                <div key={i} className={`flex gap-5 py-7 ${i < steps.length - 1 ? 'border-b border-white/[0.07]' : ''}`}>
-                  <div className="flex-shrink-0 w-9 h-9 rounded-full bg-purple-dim border border-purple-border flex items-center justify-center text-purple-2 text-sm font-black">
+                <div key={i} className={`flex gap-5 py-7 ${i < steps.length - 1 ? 'border-b border-bdr' : ''}`}>
+                  <div
+                    className="flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center text-purple-light text-sm font-black"
+                    style={{ background: 'rgba(124,58,237,0.12)', border: '1px solid rgba(124,58,237,0.3)' }}
+                  >
                     {s.n}
                   </div>
                   <div>
-                    <p className="font-bold text-[15px] mb-1">{s.title}</p>
+                    <p className="font-bold text-[15px] mb-1 text-t1">{s.title}</p>
                     <p className="text-t2 text-sm leading-relaxed">{s.desc}</p>
                   </div>
                 </div>
@@ -41,15 +43,20 @@ export default function HowItWorks() {
             </div>
           </div>
 
-          {/* right — lesson card mocks */}
           <div className="flex flex-col gap-3 mt-4">
             {mockLessons.map((l, i) => (
-              <div key={i} className="bg-surface border-subtle rounded-2xl px-6 py-5 transition-all hover:border-purple-border">
-                <p className="text-purple text-[11px] font-bold tracking-wide uppercase mb-2">{l.tag}</p>
-                <p className="font-bold text-[15px] mb-1">{l.title}</p>
+              <div
+                key={i}
+                className="bg-surface rounded-2xl px-6 py-5 transition-all"
+                style={{ border: '1px solid #3D3D5C' }}
+                onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(124,58,237,0.4)'}
+                onMouseLeave={e => e.currentTarget.style.borderColor = '#3D3D5C'}
+              >
+                <p className="text-purple-light text-[11px] font-bold tracking-wide uppercase mb-2">{l.tag}</p>
+                <p className="font-bold text-[15px] mb-1 text-t1">{l.title}</p>
                 <p className="text-t2 text-sm">{l.sub}</p>
-                <div className="mt-4 h-1 rounded-full bg-white/[0.06] overflow-hidden">
-                  <div className="h-full rounded-full bg-purple transition-all" style={{ width: `${l.pct}%` }} />
+                <div className="mt-4 h-1 rounded-full overflow-hidden" style={{ background: '#3D3D5C' }}>
+                  <div className="h-full rounded-full bg-purple" style={{ width: `${l.pct}%` }} />
                 </div>
               </div>
             ))}

@@ -1,20 +1,18 @@
-function PhoneMock({ screenshot, label, className = '' }) {
+function Phone({ src, alt, center }) {
+  const w = center ? 256 : 210
   return (
-    <div className={`relative rounded-[2.2rem] overflow-hidden border border-white/10 bg-surface shadow-2xl ${className}`} style={{ width: 210 }}>
-      {screenshot
-        ? <img src={screenshot} alt={label} className="w-full block" />
-        : (
-          <div className="w-full flex flex-col items-center justify-center gap-3 text-t3 text-xs font-medium" style={{ aspectRatio: '9/19.5' }}>
-            <div className="w-10 h-10 rounded-xl bg-purple-dim border border-purple-border flex items-center justify-center">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A89FFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="5" y="2" width="14" height="20" rx="2"/>
-                <line x1="12" y1="18" x2="12.01" y2="18"/>
-              </svg>
-            </div>
-            {label}
-          </div>
-        )
-      }
+    <div
+      className={`relative rounded-[2.2rem] overflow-hidden bg-surface-2 ${center ? 'z-10' : 'opacity-75'}`}
+      style={{
+        width: w,
+        border: '1.5px solid #3D3D5C',
+        boxShadow: center
+          ? '0 60px 100px rgba(0,0,0,0.8), 0 0 60px rgba(124,58,237,0.25)'
+          : '0 40px 80px rgba(0,0,0,0.6)',
+        transform: center ? 'translateY(-20px)' : 'translateY(0)',
+      }}
+    >
+      <img src={src} alt={alt} className="w-full block" />
     </div>
   )
 }
@@ -22,51 +20,54 @@ function PhoneMock({ screenshot, label, className = '' }) {
 export default function Hero() {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-32 pb-16 relative overflow-hidden">
-      {/* bg glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full pointer-events-none"
-        style={{ background: 'radial-gradient(circle, rgba(124,111,255,0.16) 0%, transparent 65%)' }} />
+      <div
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[700px] pointer-events-none"
+        style={{ background: 'radial-gradient(ellipse, rgba(124,58,237,0.18) 0%, transparent 65%)' }}
+      />
 
       <div className="relative z-10 flex flex-col items-center">
-        {/* eyebrow */}
-        <div className="inline-flex items-center gap-2 border border-purple-border bg-purple-dim text-purple-2 text-xs font-semibold px-4 py-1.5 rounded-full mb-8 tracking-wide">
-          <span className="w-1.5 h-1.5 rounded-full bg-purple shadow-[0_0_8px_#7C6FFF]" />
-          NOW AVAILABLE ON IOS
+        <div
+          className="inline-flex items-center gap-2 text-purple-light text-xs font-semibold px-4 py-1.5 rounded-full mb-8 tracking-widest uppercase"
+          style={{ border: '1px solid rgba(124,58,237,0.3)', background: 'rgba(124,58,237,0.1)' }}
+        >
+          <span className="w-1.5 h-1.5 rounded-full bg-purple" style={{ boxShadow: '0 0 8px #7C3AED' }} />
+          Now available on iOS
         </div>
 
-        <h1 className="text-[clamp(48px,9vw,96px)] font-black leading-[1.02] tracking-[-3px] max-w-4xl mb-6">
-          Learn anything<br />in <span className="text-grad-purple">minutes a day</span>
+        <h1 className="text-[clamp(48px,9vw,94px)] font-black leading-[1.02] tracking-[-3px] max-w-4xl mb-6">
+          The smarter way<br />to <span className="text-grad">grow every day</span>
         </h1>
 
-        <p className="text-t2 text-[clamp(16px,2vw,19px)] max-w-[440px] leading-relaxed mb-12">
-          Bite-sized lessons, AI tutoring, and daily streaks that actually stick. Personal growth that fits your life.
+        <p className="text-t2 text-[clamp(16px,2vw,19px)] max-w-[460px] leading-relaxed mb-12">
+          Short text-based lessons, AI tutoring, and daily habits that build real knowledge — without the fluff of video courses.
         </p>
 
-        <div className="flex flex-wrap gap-3 justify-center">
+        <div className="flex flex-wrap gap-3 justify-center" id="download">
           <a
             href="#download"
-            id="download"
             className="inline-flex items-center gap-2.5 bg-purple text-white font-bold text-[15px] px-7 py-4 rounded-2xl glow transition-all hover:-translate-y-0.5"
           >
             <AppleIcon />
             Download on App Store
           </a>
           <a
-            href="#how"
-            className="inline-flex items-center gap-2 border border-white/10 text-t2 font-semibold text-[15px] px-7 py-4 rounded-2xl transition-all hover:border-purple-border hover:text-white hover:-translate-y-0.5"
+            href="#why"
+            className="inline-flex items-center gap-2 text-t2 font-semibold text-[15px] px-7 py-4 rounded-2xl transition-all hover:text-t1 hover:-translate-y-0.5"
+            style={{ border: '1px solid #3D3D5C' }}
           >
-            See how it works
+            Why text-based?
             <ArrowIcon />
           </a>
         </div>
 
-        {/* phones */}
-        <div className="relative flex items-end justify-center gap-4 mt-20">
-          <PhoneMock label="screenshot 2" className="opacity-70 translate-y-6" />
-          <PhoneMock label="screenshot 1" className="z-10 shadow-[0_60px_100px_rgba(0,0,0,0.7),0_0_60px_rgba(124,111,255,0.2)]" style={{ width: 248 }} />
-          <PhoneMock label="screenshot 3" className="opacity-70 translate-y-6" />
-          {/* ground glow */}
-          <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 w-72 h-24 pointer-events-none"
-            style={{ background: 'radial-gradient(ellipse, rgba(124,111,255,0.22) 0%, transparent 70%)' }} />
+        <div className="relative flex items-end justify-center gap-5 mt-20">
+          <Phone src="/images/courses.png" alt="Courses" />
+          <Phone src="/images/homepage.png" alt="Home" center />
+          <Phone src="/images/reviewcoursepage.png" alt="Review" />
+          <div
+            className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-80 h-24 pointer-events-none"
+            style={{ background: 'radial-gradient(ellipse, rgba(124,58,237,0.2) 0%, transparent 70%)' }}
+          />
         </div>
       </div>
     </section>
@@ -80,6 +81,7 @@ function AppleIcon() {
     </svg>
   )
 }
+
 function ArrowIcon() {
   return (
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

@@ -5,12 +5,12 @@
 @tailwind utilities;
 
 @layer base {
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
     font-family: 'Inter', sans-serif;
-    background: #08080F;
-    color: #F0F0FF;
+    background: #0F0F1A;
+    color: #FAFAFA;
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
   }
@@ -19,26 +19,25 @@
 
 @layer utilities {
   .text-grad {
-    background: linear-gradient(135deg, #fff 0%, #A89FFF 100%);
+    background: linear-gradient(135deg, #A78BFA 0%, #EC4899 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  .text-grad-purple {
-    background: linear-gradient(135deg, #A89FFF 0%, #C4BFFF 100%);
+  .text-grad-white {
+    background: linear-gradient(135deg, #fff 0%, #A78BFA 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   .glow {
-    box-shadow: 0 0 40px rgba(124,111,255,0.4);
+    box-shadow: 0 0 40px rgba(124,58,237,0.45);
   }
   .glow:hover {
-    box-shadow: 0 0 60px rgba(124,111,255,0.55);
+    box-shadow: 0 0 60px rgba(124,58,237,0.6);
   }
-  .border-b-subtle { border-bottom: 1px solid rgba(255,255,255,0.08); }
-  .border-t-subtle { border-top: 1px solid rgba(255,255,255,0.08); }
-  .border-subtle {
-    border: 1px solid rgba(255,255,255,0.08);
-  }
+  .border-b-subtle { border-bottom: 1px solid #3D3D5C; }
+  .border-t-subtle { border-top: 1px solid #3D3D5C; }
+  .border-subtle { border: 1px solid #3D3D5C; }
+  .divider { height: 1px; background: #3D3D5C; }
 }
