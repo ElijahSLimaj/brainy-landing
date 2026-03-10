@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #08080F;
+    color: #F0F0FF;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+  a { text-decoration: none; }
+}
+
+@layer utilities {
+  .text-grad {
+    background: linear-gradient(135deg, #fff 0%, #A89FFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .text-grad-purple {
+    background: linear-gradient(135deg, #A89FFF 0%, #C4BFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .glow {
+    box-shadow: 0 0 40px rgba(124,111,255,0.4);
+  }
+  .glow:hover {
+    box-shadow: 0 0 60px rgba(124,111,255,0.55);
+  }
+  .border-b-subtle { border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .border-t-subtle { border-top: 1px solid rgba(255,255,255,0.08); }
+  .border-subtle {
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+}
