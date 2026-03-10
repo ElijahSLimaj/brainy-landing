@@ -2,12 +2,12 @@ const testimonials = [
   {
     name: 'Ciarán Murphy',
     location: 'Dublin, Ireland',
-    text: "I've tried video courses, audiobooks, podcasts — something always got in the way. Brainy was the first thing that actually fit. I read a lesson on the Luas this morning and I'm still thinking about it.",
+    text: "I've tried video courses, audiobooks, podcasts, something always got in the way. Brainy was the first thing that actually fit. I read a lesson on the Luas this morning and I'm still thinking about it.",
   },
   {
     name: 'James Fletcher',
     location: 'Manchester, UK',
-    text: "The AI tutor surprised me. I asked it to explain a concept from a different angle — completely off the cuff — and it just did it, immediately, in the context of what I'd been reading. I've not seen anything else do that.",
+    text: "The AI tutor surprised me. I asked it to explain a concept from a different angle, completely off the cuff, and it just did it, immediately, in the context of what I'd been reading. I've not seen anything else do that.",
   },
   {
     name: 'Aoife Kelly',

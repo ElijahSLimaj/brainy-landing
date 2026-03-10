@@ -1,12 +1,12 @@
 const points = [
   {
     label: 'Reading is thinking',
-    body: 'When you read, your brain is working. It builds sentences, fills in gaps, questions claims, makes connections. When you watch a video, it waits. That difference — active versus passive — is the whole ballgame. And it shows up clearly in the research.',
+    body: 'When you read, your brain is working. It builds sentences, fills in gaps, questions claims, makes connections. When you watch a video, it waits. That difference, active versus passive, is the whole ballgame. And it shows up clearly in the research.',
     cite: 'Roediger & Butler, Trends in Cognitive Sciences, 2011',
   },
   {
     label: 'You move at your own pace',
-    body: "Reading lets you slow down where something matters and move quickly through what you already know. Video locks you into one speed — the speaker's. Learner-controlled pacing consistently produces better outcomes than fixed-pace delivery.",
+    body: "Reading lets you slow down where something matters and move quickly through what you already know. Video locks you into one speed: the speaker's. Learner-controlled pacing consistently produces better outcomes than fixed-pace delivery.",
     cite: 'Mayer & Moreno, Educational Psychologist, 2003',
   },
   {
@@ -16,7 +16,7 @@ const points = [
   },
   {
     label: 'What you read, you keep',
-    body: 'Students who read material consistently outperform video learners on retention tests administered a week later. Not because reading is harder — but because the work of reading is exactly the kind of cognitive effort that makes memories stick.',
+    body: 'Students who read material consistently outperform video learners on retention tests administered a week later. Not because reading is harder, but because the work of reading is exactly the kind of cognitive effort that makes memories stick.',
     cite: 'Rogowsky et al., Journal of Educational Research, 2016',
   },
 ]
@@ -32,7 +32,7 @@ export default function WhyText() {
               We made a deliberate<br />choice. No videos.
             </h2>
             <p className="text-t2 text-[16px] leading-[1.85] mb-5">
-              Not because it was cheaper or easier. Because we genuinely believe that reading is the deepest, most powerful way to learn something — and that most apps have forgotten that.
+              Not because it was cheaper or easier. Because we genuinely believe that reading is the deepest, most powerful way to learn something, and that most apps have forgotten that.
             </p>
             <p className="text-t2 text-[16px] leading-[1.85]">
               Decades of cognitive science back us up. Here is what the research actually says.
@@ -43,7 +43,7 @@ export default function WhyText() {
             >
               <p className="text-purple-light font-bold text-sm mb-2">The bottom line</p>
               <p className="text-t1 text-[15px] leading-[1.75]">
-                Readers outperform video learners by <span className="text-purple-light font-semibold">28% on retention</span> when tested one week later. Not because they studied harder — because they were present in a different way.
+                Readers outperform video learners by <span className="text-purple-light font-semibold">28% on retention</span> when tested one week later. Not because they studied harder, but because they were present in a different way.
               </p>
               <p className="text-t3 text-xs mt-3">Rogowsky et al., Journal of Educational Research, 2016</p>
             </div>

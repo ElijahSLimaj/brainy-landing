@@ -8,7 +8,7 @@ const plans = [
   {
     name: 'Free',
     price: '$0',
-    desc: 'Try it out — no commitment.',
+    desc: 'Try it out. No commitment.',
     features: ['5 free lessons', 'Course previews', 'Streaks & XP'],
     cta: 'Get Started Free',
     variant: 'outline',

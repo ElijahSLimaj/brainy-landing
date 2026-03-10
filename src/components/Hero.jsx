@@ -39,7 +39,7 @@ export default function Hero() {
 
         <p className="text-t2 text-[clamp(17px,2vw,20px)] max-w-[520px] leading-[1.8] mb-12" style={{ fontWeight: 400 }}>
           Brainy brings the world's most important ideas to you in short, 
-          beautifully written lessons — built for people who still believe 
+          beautifully written lessons, built for people who still believe 
           learning matters.
         </p>
 
