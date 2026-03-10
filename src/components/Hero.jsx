@@ -1,10 +1,9 @@
 function Phone({ src, alt, center }) {
-  const w = center ? 256 : 210
   return (
     <div
       className={`relative rounded-[2.2rem] overflow-hidden bg-surface-2 ${center ? 'z-10' : 'opacity-75'}`}
       style={{
-        width: w,
+        width: center ? 256 : 210,
         border: '1.5px solid #3D3D5C',
         boxShadow: center
           ? '0 60px 100px rgba(0,0,0,0.8), 0 0 60px rgba(124,58,237,0.25)'
@@ -27,19 +26,21 @@ export default function Hero() {
 
       <div className="relative z-10 flex flex-col items-center">
         <div
-          className="inline-flex items-center gap-2 text-purple-light text-xs font-semibold px-4 py-1.5 rounded-full mb-8 tracking-widest uppercase"
+          className="inline-flex items-center gap-2 text-purple-light text-xs font-semibold px-4 py-1.5 rounded-full mb-10 tracking-widest uppercase"
           style={{ border: '1px solid rgba(124,58,237,0.3)', background: 'rgba(124,58,237,0.1)' }}
         >
           <span className="w-1.5 h-1.5 rounded-full bg-purple" style={{ boxShadow: '0 0 8px #7C3AED' }} />
           Now available on iOS
         </div>
 
-        <h1 className="text-[clamp(48px,9vw,94px)] font-black leading-[1.02] tracking-[-3px] max-w-4xl mb-6">
-          The smarter way<br />to <span className="text-grad">grow every day</span>
+        <h1 className="text-[clamp(48px,9vw,94px)] font-black leading-[1.02] tracking-[-3px] max-w-4xl mb-8">
+          There is so much<br /><span className="text-grad">worth knowing.</span>
         </h1>
 
-        <p className="text-t2 text-[clamp(16px,2vw,19px)] max-w-[460px] leading-relaxed mb-12">
-          Short text-based lessons, AI tutoring, and daily habits that build real knowledge — without the fluff of video courses.
+        <p className="text-t2 text-[clamp(17px,2vw,20px)] max-w-[520px] leading-[1.8] mb-12" style={{ fontWeight: 400 }}>
+          Brainy brings the world's most important ideas to you in short, 
+          beautifully written lessons — built for people who still believe 
+          learning matters.
         </p>
 
         <div className="flex flex-wrap gap-3 justify-center" id="download">

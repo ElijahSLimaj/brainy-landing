@@ -1,14 +1,14 @@
 const steps = [
-  { n: 1, title: 'Pick a course', desc: 'Browse courses on productivity, communication, finance, mindset, leadership, and more.' },
-  { n: 2, title: 'Read a lesson in 10–15 minutes', desc: 'Text-based, tightly written, no padding. Then test yourself with a short quiz.' },
-  { n: 3, title: 'Practice with AI role play', desc: 'Apply what you learned in a realistic scenario before the next lesson unlocks.' },
-  { n: 4, title: 'Watch your skills compound', desc: 'Lessons add up. Track XP, streaks, and completions as your knowledge grows.' },
+  { n: 1, title: 'Choose something you want to understand', desc: 'Browse courses on productivity, communication, finance, mindset, leadership, and more. Pick whatever pulls at you.' },
+  { n: 2, title: 'Read. Think. Be tested.', desc: 'Each lesson takes 10 to 15 minutes. Tightly written, clearly structured. A short quiz at the end makes sure it landed.' },
+  { n: 3, title: 'Apply it before you move on', desc: 'Step into an AI-driven scenario and use the idea you just learned. This is where understanding becomes something you actually own.' },
+  { n: 4, title: 'Come back tomorrow', desc: 'Small, consistent lessons compound. XP, streaks, and progress tracking make showing up the next day feel like the obvious thing to do.' },
 ]
 
 const mockLessons = [
-  { tag: 'Productivity · Lesson 3 of 8', title: 'The Two-Minute Rule', sub: 'If it takes less than two minutes, do it now.', pct: 37 },
-  { tag: 'Communication · Lesson 1 of 6', title: 'Active Listening', sub: 'How to actually hear what someone is saying.', pct: 16 },
-  { tag: 'Finance · Lesson 5 of 10', title: 'The 50/30/20 Budget', sub: 'A simple framework anyone can follow.', pct: 50 },
+  { tag: 'Leadership · Lesson 3 of 8', title: 'Why Feedback Fails', sub: 'The gap between what you meant and what they heard.', pct: 37 },
+  { tag: 'Communication · Lesson 1 of 6', title: 'The Weight of Silence', sub: 'What you leave unsaid shapes every conversation.', pct: 16 },
+  { tag: 'Finance · Lesson 5 of 10', title: 'The 50/30/20 Rule', sub: 'Simple enough to start today. Powerful enough to hold.', pct: 50 },
 ]
 
 export default function HowItWorks() {
@@ -17,12 +17,12 @@ export default function HowItWorks() {
       <div className="max-w-5xl mx-auto px-8 py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div>
-            <p className="text-purple-light text-xs font-bold tracking-[1.5px] uppercase mb-4">How it works</p>
+            <p className="text-purple-light text-xs font-bold tracking-[1.5px] uppercase mb-5">How it works</p>
             <h2 className="text-[clamp(28px,4vw,44px)] font-black tracking-tight leading-tight mb-4">
-              From zero to fluent,<br />one lesson at a time
+              Simple enough<br />to start today
             </h2>
-            <p className="text-t2 text-[16px] leading-relaxed mt-2 mb-10">
-              A structured path that builds real knowledge without the overwhelm.
+            <p className="text-t2 text-[16px] leading-[1.85] mt-3 mb-10">
+              The best learning system is one you actually use. Brainy is built around that truth.
             </p>
 
             <div className="flex flex-col">
@@ -35,7 +35,7 @@ export default function HowItWorks() {
                     {s.n}
                   </div>
                   <div>
-                    <p className="font-bold text-[15px] mb-1 text-t1">{s.title}</p>
+                    <p className="font-bold text-[15px] mb-1.5 text-t1">{s.title}</p>
                     <p className="text-t2 text-sm leading-relaxed">{s.desc}</p>
                   </div>
                 </div>
