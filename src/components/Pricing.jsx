@@ -25,8 +25,8 @@ const plans = [
   {
     name: 'Pro+',
     price: '$19.99',
-    desc: 'Everything in Pro, plus unlimited AI Tutor.',
-    features: ['Everything in Pro', 'Unlimited AI Tutor', 'Early access to courses'],
+    desc: 'Everything in Pro, plus AI Tutor and Stories.',
+    features: ['Everything in Pro', 'Unlimited AI Tutor', 'Stories — learn through fiction', 'Early access to courses'],
     cta: 'Get Pro+',
     variant: 'outline',
   },

@@ -6,6 +6,11 @@ const features = [
     wide: true,
   },
   {
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>,
+    title: 'Learn through story',
+    desc: "Some ideas land differently when they're alive inside a character. Stories are short novels written to teach — each one wraps a real skill inside a narrative that makes it stick long after you finish.",
+  },
+  {
     icon: <svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>,
     title: 'An AI tutor that actually listens',
     desc: "Every good lesson raises questions you didn't know you had. Your AI tutor is there for those moments. Patient, precise, and always working from what you've actually been learning.",
