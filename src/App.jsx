@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Features from './components/Features'
@@ -7,8 +8,10 @@ import Testimonials from './components/Testimonials'
 import Pricing from './components/Pricing'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
+import PrivacyPolicy from './components/PrivacyPolicy'
+import TermsOfService from './components/TermsOfService'
 
-export default function App() {
+function Home() {
   return (
     <>
       <Nav />
@@ -21,5 +24,17 @@ export default function App() {
       <CTA />
       <Footer />
     </>
+  )
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<TermsOfService />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
