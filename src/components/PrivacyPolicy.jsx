@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
       <div className="max-w-3xl mx-auto px-8 py-16">
         <a href="/" className="text-purple-light text-sm font-semibold hover:text-white transition-colors mb-10 inline-block">← Back to Brainy</a>
         <h1 className="text-[clamp(28px,4vw,42px)] font-black tracking-tight text-t1 mb-3">Privacy Policy</h1>
-        <p className="text-t3 text-sm mb-12">Last updated: March 31, 2026</p>
+        <p className="text-t3 text-sm mb-12">Last updated: April 1, 2026</p>
 
         <Section title="1. Introduction">
           <p>Brainy ("we", "us", or "our") is a mobile learning application operated by Buildstack HQ. This Privacy Policy explains how we collect, use, and protect your personal information when you use the Brainy app and website at brainy.buildstackhq.com.</p>
@@ -19,8 +19,10 @@ export default function PrivacyPolicy() {
         </Section>
 
         <Section title="2. Information We Collect">
-          <p><strong className="text-t1">Account information:</strong> When you create an account, we collect your email address, display name, and profile photo (if provided via Apple or Google sign-in).</p>
-          <p><strong className="text-t1">Usage data:</strong> We collect information about how you use the app, including lessons completed, quiz scores, streaks, XP earned, and courses accessed.</p>
+          <p><strong className="text-t1">Account information:</strong> When you create an account, we collect your email address and display name. If you sign in with Apple or Google, we receive your name and email address from those providers in accordance with their own privacy policies.</p>
+          <p><strong className="text-t1">Usage data:</strong> We collect information about how you use the app, including lessons completed, quiz scores, streaks, XP earned, courses accessed, and reading progress in Stories.</p>
+          <p><strong className="text-t1">Social and leaderboard data:</strong> Your display name, XP, and streak are visible to other Brainy users on the leaderboard and in leagues. When you connect with friends in the app, those friends can see your streak and activity. You control who you add as a friend.</p>
+          <p><strong className="text-t1">Referral data:</strong> If you use or share a referral code, we store that code and any associated rewards in your account.</p>
           <p><strong className="text-t1">Purchase information:</strong> If you subscribe to Pro or Pro+, we receive confirmation of your purchase through Apple's or Google's payment system. We do not store your payment card details.</p>
           <p><strong className="text-t1">AI conversation data:</strong> When you use the AI Tutor or Role Play features, your messages are processed by Anthropic's Claude API to generate responses. These conversations are stored in your account to provide chat history.</p>
           <p><strong className="text-t1">Device and technical data:</strong> We collect device identifiers, operating system version, and push notification tokens to deliver notifications and improve app performance.</p>
@@ -31,8 +33,10 @@ export default function PrivacyPolicy() {
           <ul className="list-disc pl-5 space-y-1">
             <li>Provide, maintain, and improve the Brainy app</li>
             <li>Track your learning progress and personalise your experience</li>
+            <li>Power social features including leaderboards, leagues, and friend connections</li>
             <li>Process subscriptions and verify access to premium features</li>
-            <li>Send push notifications about streaks, rewards, and learning reminders (you can opt out at any time)</li>
+            <li>Manage referral rewards</li>
+            <li>Send push notifications about streaks, rewards, and learning reminders (you can opt out at any time in your device settings)</li>
             <li>Respond to support requests</li>
             <li>Detect and prevent fraud or abuse</li>
           </ul>
@@ -43,13 +47,15 @@ export default function PrivacyPolicy() {
           <ul className="list-disc pl-5 space-y-1">
             <li><strong className="text-t1">Firebase (Google):</strong> Authentication, database, and push notifications — <a href="https://firebase.google.com/support/privacy" className="text-purple-light hover:underline" target="_blank" rel="noreferrer">Privacy Policy</a></li>
             <li><strong className="text-t1">Anthropic:</strong> Powers the AI Tutor and Role Play features — <a href="https://www.anthropic.com/privacy" className="text-purple-light hover:underline" target="_blank" rel="noreferrer">Privacy Policy</a></li>
-            <li><strong className="text-t1">Apple / Google:</strong> In-app purchase processing</li>
+            <li><strong className="text-t1">Apple:</strong> Sign in with Apple, in-app purchases, and push notifications — <a href="https://www.apple.com/legal/privacy/" className="text-purple-light hover:underline" target="_blank" rel="noreferrer">Privacy Policy</a></li>
+            <li><strong className="text-t1">Google:</strong> Sign in with Google and in-app purchases — <a href="https://policies.google.com/privacy" className="text-purple-light hover:underline" target="_blank" rel="noreferrer">Privacy Policy</a></li>
             <li><strong className="text-t1">Vercel:</strong> Website hosting</li>
           </ul>
         </Section>
 
         <Section title="5. Data Sharing">
           <p>We do not sell your personal data. We do not share your personal data with third parties except as necessary to operate the service (as described above) or if required by law.</p>
+          <p>Certain information — specifically your display name, XP, and streak — is visible to other users as part of the leaderboard and social features. You can review what is shared by visiting your Profile in the app.</p>
         </Section>
 
         <Section title="6. Data Retention">
@@ -65,7 +71,7 @@ export default function PrivacyPolicy() {
         </Section>
 
         <Section title="9. Your Rights">
-          <p>Depending on your location, you may have rights to access, correct, or delete your personal data. To exercise these rights, contact us at the address below.</p>
+          <p>Depending on your location, you may have rights to access, correct, or delete your personal data. To exercise these rights, contact us at the address below. California residents may have additional rights under the CCPA. Users in the European Economic Area may have rights under the GDPR.</p>
         </Section>
 
         <Section title="10. Changes to This Policy">
